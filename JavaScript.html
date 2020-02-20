@@ -1,0 +1,71 @@
+<!-- Programmer: Paula Marin
+Project: javascript
+Date: 02/19/2020-->
+
+<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head><body>
+		
+		<head>
+	<!-- link Css style code  -->
+	<link rel="stylesheet" href="style.css">
+	
+	<!-- using script to interact with user -->
+	<script>
+   
+		function validateForm() 
+{
+		var inputs = [];
+			inputs[0] = document.getElementById("firstname").value;
+			inputs[1] = document.getElementById("lastname").value;
+			inputs[2] = document.getElementById("email").value;
+			
+  for(var i=0; i < inputs.length; i++)
+  {
+		if (inputs[i] == "") 
+		{
+			alert("Name must be filled out");
+			return false;
+		}
+	}
+}
+
+	</script>
+
+		</head>
+	<body>
+    
+       
+    
+	<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+	 <legend>Customer Information</legend> 
+	 
+		<table>
+	 
+            <tr>
+               <td align = "right">First Name</td>
+               <td><input type = "text" id = "firstname" /></td>
+            </tr>
+			
+			<tr>
+               <td align = "right">Last Name</td>
+               <td><input type = "text" id = "lastname" /></td>
+            </tr>
+			
+			  <tr>
+               <td align = "right">E-Mail</td>
+               <td><input type = "email" id = "email" /></td>
+            </tr>
+			
+			<tr>
+               <td align = "right"></td>
+               <td><input type = "submit" value = "Submit" /></td>
+            </tr>
+			
+   
+  
+		</table>
+   
+		</form>
+
+	</body>
+</html>
